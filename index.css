@@ -42,6 +42,10 @@
     height: 100%;
 }
 
+#equipo img{
+    height: 270px;
+}
+
 #place-time{
     background-color: #343a40;
     color:white;
@@ -58,4 +62,8 @@
 
 #footer a{
     color: white
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width:10%;
 }
