@@ -42,10 +42,24 @@
     height: 100%;
 }
 
+#proyectos img{
+    height: 100%;
+}
 #equipo img{
     height: 270px;
 }
 
+#experiencia img{
+    max-width: 100%;
+}
+#overlayImg1{
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+}
+#img1{
+position: relative;    
+}
 #place-time{
     background-color: #343a40;
     color:white;
