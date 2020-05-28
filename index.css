@@ -69,6 +69,10 @@ position: relative;
     max-width: 100%;
 }
 
+#software img{
+    max-width: 120px;
+    max-height: 85px;
+}
 
 #footer{
     background: linear-gradient(90deg,#1c3643,#273b47 25%,#1e5372); 

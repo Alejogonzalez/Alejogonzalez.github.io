@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="index.css">
     <link href="css/smart_wizard.css" rel="stylesheet">
     <link href="css/smart_wizard_theme_dots.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="css/softSlider.css">
     <title>Alejandro González V.</title>
   </head>
   <body data-spy="scroll" data-target="#navbarSupportedContent" data-offset="86">
@@ -257,7 +259,7 @@
       <!-- LUGAR END -->
       <!-- Proyectos -->
       <section id="proyectos">
-        <div class="conainer-fluid">
+        <div class="conainer-fluid mt-4">
           <div class="row">
             <div class="col text-center">
               <h2 class="h2">PROYECTOS EN LOS QUE HE PARTICIPADO</h2>
@@ -365,6 +367,64 @@
 
       </section>
       <!-- proyectos END -->
+      <section id="software">
+        
+        <div class="brands">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col text-center">
+                  <h2>EXPERIENCIA DE SOFTWARE</h2>
+                </div>
+              </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="brands_slider_container">
+                            <div class="owl-carousel owl-theme brands_slider">
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center"><img src="assets/carrusel/visualStudio.jpg" alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center"><img src="assets/carrusel/TIA Portal Logo.jpg" alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center"><img src="assets/carrusel/step7.jpg" alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center"><img src="assets/carrusel/Studio5000-300x187.jpg" alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center"><img src="assets/carrusel/rslogix5000.jpg" alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center"><img src="assets/carrusel/rslogix500.gif" alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center"><img src="assets/carrusel/FTVstudio.png" alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center"><img src="assets/carrusel/Unity Pro XL.jpg" alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                  <div class="brands_item d-flex flex-column justify-content-center"><img src="assets/carrusel/robotstudio.jpg" alt=""></div>
+                                </div>
+                                <!-- <div class="owl-item">
+                                  <div class="brands_item d-flex flex-column justify-content-center"><img src="assets/carrusel/kukaworkvisual.png" alt=""></div>
+                                </div> -->
+                                <div class="owl-item">
+                                  <div class="brands_item d-flex flex-column justify-content-center"><img src="assets/carrusel/eplan.png" alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                  <div class="brands_item d-flex flex-column justify-content-center"><img src="assets/carrusel/office.png" alt=""></div>
+                                </div>
+                            </div> <!-- Brands Slider Navigation -->
+                            <div class="brands_nav brands_prev"><i class="fas fa-chevron-left"></i></div>
+                            <div class="brands_nav brands_next"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
       <!-- Contactanos -->
 
       <section id="contactanos" class="pt-3 pb-3">
@@ -537,6 +597,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="Alekozindex.js"></script>
     <script src="js/jquery.smartWizard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
     <script>
       $('#stepwizard').smartWizard({
           theme: 'dots',
@@ -575,6 +636,47 @@
           alert('Oops... ' + JSON.stringify(error));
       });
     });
+  </script>
+  <script>
+    $(document).ready(function(){
+
+          if($('.brands_slider').length)
+          {
+          var brandsSlider = $('.brands_slider');
+
+          brandsSlider.owlCarousel(
+          {
+          loop:true,
+          autoplay:true,
+          autoplayTimeout:1000,
+          nav:false,
+          dots:false,
+          autoWidth:true,
+          items:8,
+          margin:42
+          });
+
+          if($('.brands_prev').length)
+          {
+          var prev = $('.brands_prev');
+          prev.on('click', function()
+          {
+          brandsSlider.trigger('prev.owl.carousel');
+          });
+          }
+
+          if($('.brands_next').length)
+          {
+          var next = $('.brands_next');
+          next.on('click', function()
+          {
+          brandsSlider.trigger('next.owl.carousel');
+          });
+          }
+          }
+
+
+          });
   </script>
   </body>
 </html>
